@@ -11,7 +11,7 @@ export let Link;
 a{
     color: white;
     text-decoration: none;
-    background-color: var(--secondary-color_light);
+    background-color: var(--secondary-color_dark);
     margin: 2rem;
     padding: 1.5rem;
     border-radius: 10px;
