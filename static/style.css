@@ -1,0 +1,77 @@
+:root{
+    --bg-color_light: #343434;
+    --bg-color_medium: #2d2d2d;
+    --bg-color_dark: #141414;
+    --main-color_light: #F5537B;
+    --main-color_medium:#EF003C;
+    --main-color_dark:#a40a32;
+    --secondary-color_light:#76E5BE;
+    --secondary-color_medium: #25CE93;
+    --secondary-color_dark:#009560;
+
+    --shadow-filter:  drop-shadow(0 1px 1px rgba(0,0,0,0.12))
+    drop-shadow(0 2px 2px rgba(0,0,0,0.20))
+    drop-shadow(0 4px 4px rgba(0,0,0,0.20))
+    drop-shadow(0 8px 8px rgba(0,0,0,0.20))
+    drop-shadow(0 16px 16px rgba(0,0,0,0.20));
+
+
+}
+
+h1, h2, h3, h4, h5, h6, a, button {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p, span, label{
+    font-family: 'Roboto Slab', serif;
+}
+
+.logo_container{
+    width: 25%;
+    height: auto;
+}
+
+.section_title{
+  text-decoration: underline var(--main-color_medium);
+  font-size: 3.75em;
+}
+
+nav, hr, .hero_logo, .card-media{
+    filter:  drop-shadow(0 1px 1px rgba(0,0,0,0.12))
+    drop-shadow(0 2px 2px rgba(0,0,0,0.20))
+    drop-shadow(0 4px 4px rgba(0,0,0,0.20))
+    drop-shadow(0 8px 8px rgba(0,0,0,0.20))
+    drop-shadow(0 16px 16px rgba(0,0,0,0.20));
+  }
+
+  nav{
+      line-height: 2;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color_dark);
+}
+
+@media only screen and (max-width: 441px){
+    header{ 
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo_container{
+        width: 80% !important;
+    }
+}
+
+.section-heading_container{
+    margin: 1em;
+    text-align: center;
+}
+
+section{
+    box-shadow: drop-shadow(0 1px 6px rgba(0,0,0,0.12));
+}
