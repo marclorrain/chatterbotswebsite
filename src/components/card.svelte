@@ -35,7 +35,7 @@ let cards = [
         position: relative;
         top: 0;
         left: 0;
-        max-width: 100% ;
+        max-width: 100%;
     }
     .third{
     min-width: 100%;
