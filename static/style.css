@@ -14,8 +14,11 @@
     drop-shadow(0 4px 4px rgba(0,0,0,0.20))
     drop-shadow(0 8px 8px rgba(0,0,0,0.20))
     drop-shadow(0 16px 16px rgba(0,0,0,0.20));
+}
 
-
+body{
+    color: white;
+    background-color: var(--bg-color_dark);
 }
 
 h1, h2, h3, h4, h5, h6, a, button {
