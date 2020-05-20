@@ -18,7 +18,11 @@
           posts: blogPosts(stage: PUBLISHED){
             slug
             title
-            summary
+			summary
+			blogImg {
+                    url
+			}
+			publicationDate
           }
         }`
         })
@@ -40,10 +44,64 @@
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	@media only screen and (max-width: 441px){
+    .card{
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 100%;
 	}
+	.blog-card{
+		flex-direction: column;
+	}
+	aside{
+	min-width: 100%;
+}
+
+	.card-media{
+		display: none;
+	}
+
+}
+
+.blog-title{
+    font-size: 2em;
+    text-decoration: underline var(--main-color_medium);
+	text-transform: capitalize;
+	color: white;
+}
+
+.blog-card{
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+	text-align: left;
+	border: 1px white solid;
+	border-radius: 5px;
+}
+
+.card-media{
+    width: 35%;
+    height: auto;
+}
+
+.card p{
+	font-size: 1.25rem;
+}
+
+aside{
+	width: 50%;
+}
+
 </style>
 
 <svelte:head>
@@ -51,13 +109,33 @@
 </svelte:head>
 
 <h1>Recent posts</h1>
-
-<ul>
+<div class="flex-grid-wrap">
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
+
+<div class="flex-grid">
+<div class="card">
+
+<div class="blog-card">
+<figure class="card-media">
+<img src={post.blogImg.url} alt="alt-text bozo" width="100%"/>
+</figure>
+
+<aside>
+<div class="card-title">
+<a rel='prefetch' href='blog/{post.slug}' class="blog-title">{post.title}</a>
+</div>
+<div class="card-content">
+    <p>{post.summary}</p>
+	<p> <i>Published on:{post.publicationDate} </i></p>
+</div>
+</aside>
+</div>
+
+</div>
+</div>
 	{/each}
-</ul>
+	</div>
