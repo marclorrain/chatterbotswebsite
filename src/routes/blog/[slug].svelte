@@ -76,12 +76,6 @@
 	.content :global(li) {
 		margin: 0 0 0.5em 0;
   }
-  .content p{
-    /*display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: space-around;*/
-  }
   .container{
     padding: 2rem;
     width: 80%;
