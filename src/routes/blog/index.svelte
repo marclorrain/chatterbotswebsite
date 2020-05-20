@@ -1,10 +1,39 @@
-<script context="module">
+<!-- <script context="module">
 	export function preload({ params, query }) {
 		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
 			return { posts };
 		});
 	}
+</script> -->
+
+<script context="module">
+  export async function preload(page, session) {
+    const res = await this.fetch(
+      "https://api-us-east-1.graphcms.com/v2/ckaed1ly505dc01z78zp8b3t1/master",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          query: `{
+          posts: blogPosts(stage: PUBLISHED){
+            slug
+            title
+            summary
+          }
+        }`
+        })
+      }
+    );
+    const json = await res.json();
+
+    if (res.status === 200) {
+      return json.data;
+    } else {
+      this.error(res.status, json && json.errors);
+    }
+  }
 </script>
+
 
 <script>
 	export let posts;

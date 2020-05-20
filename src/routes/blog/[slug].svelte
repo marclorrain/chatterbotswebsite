@@ -1,19 +1,42 @@
-<script context="module">
-	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
-		const data = await res.json();
 
-		if (res.status === 200) {
-			return { post: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+<script context="module">
+  export async function preload({ params, query }) {
+    // the `slug` parameter is available because
+    // this file is called [slug].svelte
+    const res = await this.fetch(
+      "https://api-us-east-1.graphcms.com/v2/ckaed1ly505dc01z78zp8b3t1/master",
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          query: `query Post($slug: String) {
+            post: blogPost(where: {
+              slug: $slug
+            }) {
+              slug
+              createdAt
+              title
+              content
+            }
+          }`,
+          variables: {
+            slug: params.slug
+          }
+        })
+      }
+    );
+    const json = await res.json();
+
+    if (res.status === 200) {
+      return json.data;
+    } else {
+      this.error(res.status, json && json.errors);
+    }
+  }
 </script>
 
 <script>
+    import marked from "marked";
 	export let post;
 </script>
 
@@ -60,5 +83,5 @@
 <h1>{post.title}</h1>
 
 <div class='content'>
-	{@html post.html}
+	{@html marked(post.content)}
 </div>
