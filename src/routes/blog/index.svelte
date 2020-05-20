@@ -49,13 +49,13 @@
         position: relative;
         top: 0;
         left: 0;
-        max-width: 100%;
+        min-width: 100%;
 	}
 	.blog-card{
 		flex-direction: column;
 	}
 	aside{
-	min-width: 100%;
+	width: 100%;
 }
 
 	.card-media{
@@ -75,6 +75,8 @@
 	display: flex; 
 	flex-direction: row; 
 	justify-content: space-around;
+	align-items: center;
+	width: 100%;
 }
 
 .card{
@@ -87,10 +89,12 @@
 	text-align: left;
 	border: 1px white solid;
 	border-radius: 5px;
+	background-color: var(--bg-color_light);
+	margin: 1rem 0;
 }
 
 .card-media{
-    width: 35%;
+    width: 25%;
     height: auto;
 }
 
@@ -102,21 +106,38 @@ aside{
 	width: 50%;
 }
 
+.container{
+	padding: 5%;
+}
+
+h1::after{
+	content: ":";
+	color: var(--main-color_medium);
+	font-weight: bold;
+}
+
+h1{
+	text-decoration: underline;
+	text-decoration-color: var(--main-color_medium);
+	text-transform: uppercase;
+	font-size: 2.25em;
+	font-weight: normal;
+}
+
 </style>
 
 <svelte:head>
 	<title>Blog</title>
 </svelte:head>
-
+<div class="container">
 <h1>Recent posts</h1>
-<div class="flex-grid-wrap">
+
 	{#each posts as post}
 		<!-- we're using the non-standard `rel=prefetch` attribute to
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
 
-<div class="flex-grid">
 <div class="card">
 
 <div class="blog-card">
@@ -130,12 +151,12 @@ aside{
 </div>
 <div class="card-content">
     <p>{post.summary}</p>
-	<p> <i>Published on:{post.publicationDate} </i></p>
+	<p> <i>Published on: {post.publicationDate} </i></p>
 </div>
 </aside>
 </div>
 
 </div>
-</div>
+
 	{/each}
 	</div>

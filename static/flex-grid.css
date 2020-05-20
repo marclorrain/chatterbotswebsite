@@ -16,7 +16,7 @@ section{
 }
 
 .flex-grid{
- max-width: 100%;
+ width: 100%;
  height: auto;
  flex-shrink: 10;
  flex-grow: 3;
