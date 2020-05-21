@@ -1,16 +1,23 @@
 <script>
 let TwitterIcon = '../images/twitter-icon.svg';
 let LinkedinIcon = '../images/linkedin-icon.svg';
+
+export let segment;
 </script>
 
 <footer>
 <div class="footer-container">
 <h4>Website</h4>
-<ul>
-    <li><a href="#test">First link</a></li>
-    <li><a href="#test">Second link</a></li>
-    <li><a href="#test">Third link</a></li>
-</ul>
+<nav>
+	<ul>
+		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
+		<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
+
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
+	</ul>
+</nav>
 </div>
 
 <div>
@@ -32,7 +39,7 @@ let LinkedinIcon = '../images/linkedin-icon.svg';
 
 <style>
 footer{
-    height: 15vh;
+    min-height: 15vh;
     color: var(--text-color_dark);
     display: flex;
     flex-direction: row;
@@ -59,7 +66,7 @@ footer a{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: stretch;
     flex-grow: 2;
     height: auto;
     max-width: 30%;
@@ -75,5 +82,17 @@ footer a{
 
 a:hover{
     filter: opacity(0.6);
+}
+
+@media only screen and (max-width: 441px){
+    footer{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: flex-start;
+    }
+    .social-icons{
+        justify-content: space-around;
+        align-items: space-around;
+    }
 }
 </style>

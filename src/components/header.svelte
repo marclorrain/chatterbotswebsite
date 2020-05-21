@@ -6,8 +6,8 @@
 </script>
 
 <div style="background-color: var(--bg-color_dark);">
-<header class="skewed">
 <MobileNav/>
+<header>
 <div class="logo_container"> <Logo/> </div>
 <Nav {segment}/>
 </header>

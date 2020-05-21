@@ -57,7 +57,7 @@ nav, hr, .hero_logo, .card-media{
     }
 
 .skewed{
-    clip-path: polygon(0% 0, 0% 100%, 100% calc(100% - 3rem), 100% 0%);
+    clip-path: polygon(0% 0, 0% 100%, 100% calc(100% - 1em), 100% 0%);
       /* change the calc height to a percentage height to get alternate responsive behavior*/
 }
 
@@ -71,6 +71,10 @@ nav, hr, .hero_logo, .card-media{
     
     .logo_container{
         width: 80% !important;
+    }
+
+    section {
+        padding: 2em 0;
     }
 }
 

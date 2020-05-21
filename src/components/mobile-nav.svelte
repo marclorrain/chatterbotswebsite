@@ -50,11 +50,11 @@ hr{
     width: 20%;
     padding: 10% 0;
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     text-align: left;
-    z-index: 11;
+    z-index: 10;
 }
 
 a{
@@ -86,8 +86,9 @@ hr:nth-of-type(2){
 
 .menu_button{
     width: 2.25em;
-    margin: 0;
-    z-index: 12;
+    margin: 0.5em;
+    z-index: 15;
+    position: absolute;
 }
 
 .menu_button:hover hr{
@@ -100,6 +101,10 @@ hr:nth-of-type(2){
 
 a:hover{
     color: #a40a32;
+}
+
+li {
+    list-style: none;
 }
 
     .mobile-nav{

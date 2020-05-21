@@ -16,10 +16,11 @@ let src = '../images/chatterbots-automation.svg';
 </div>
 
 <style>
+
 @media only screen and (max-width: 441px){
 
   p{
-  width: 95% !important;
+  min-width: 95% !important;
   padding: 0 !important;
   font-size: 1em;
 } 
@@ -27,7 +28,7 @@ let src = '../images/chatterbots-automation.svg';
 
 p{
   font-size: 1.25em;
-  width: 100%;
+  max-width: 60%;
   height: auto;
 }
 
