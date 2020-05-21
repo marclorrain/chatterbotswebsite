@@ -1,9 +1,79 @@
+<script>
+let TwitterIcon = '../images/twitter-icon.svg';
+let LinkedinIcon = '../images/linkedin-icon.svg';
+</script>
+
 <footer>
+<div class="footer-container">
+<h4>Website</h4>
+<ul>
+    <li><a href="#test">First link</a></li>
+    <li><a href="#test">Second link</a></li>
+    <li><a href="#test">Third link</a></li>
+</ul>
+</div>
+
+<div>
+<h4>Follow-us on social media</h4>
+
+<div class="social-icons">
+<a href="www.twitter.com">
+<img src={TwitterIcon} alt="twitter icon" class="social_icons">
+
+</a>
+<a href="www.linked.com">
+<img src={LinkedinIcon} alt="linkedin icon" class="social_icons">
+</a>
+</div>
+
+</div>
 
 </footer>
 
 <style>
 footer{
-    height: 30vh;
+    height: 15vh;
+    color: var(--text-color_dark);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.footer-container{
+    position: relative;
+}
+
+footer li{
+    list-style: none;
+    line-height: 1.5em;
+}
+
+footer a{
+    color: var(--text-color_dark);
+    text-decoration: none;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-grow: 2;
+    height: auto;
+    max-width: 30%;
+}
+.social-icons a{
+    width: 100%;
+    height: auto;
+}
+.social_icons{
+    width: 100%;
+    height: auto;
+}
+
+a:hover{
+    filter: opacity(0.6);
 }
 </style>

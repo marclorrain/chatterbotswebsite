@@ -5,18 +5,21 @@
     export let segment;
 </script>
 
-<header>
+<div style="background-color: var(--bg-color_dark);">
+<header class="skewed">
 <MobileNav/>
 <div class="logo_container"> <Logo/> </div>
 <Nav {segment}/>
 </header>
-
+</div>
 <style>
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 1rem 0.5rem ;
-    border-bottom: 1px solid var(--main-color_medium);
+    /* border-bottom: 1px solid var(--main-color_medium); */
+    background-color: var(--bg-color_dark);
+    height: 15vh;
 }
 </style>

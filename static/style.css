@@ -8,6 +8,8 @@
     --secondary-color_light:#76E5BE;
     --secondary-color_medium: #25CE93;
     --secondary-color_dark:#009560;
+    --text-color_light: #d5d5d5;
+    --text-color_dark: #c2c2c2;
 
     --shadow-filter:  drop-shadow(0 1px 1px rgba(0,0,0,0.12))
     drop-shadow(0 2px 2px rgba(0,0,0,0.20))
@@ -18,6 +20,7 @@
 
 h1, h2, h3, h4, h5, h6, a, button {
     font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
 }
 
 p, span, label{
@@ -51,8 +54,14 @@ nav, hr, .hero_logo, .card-media{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color_dark);
+    }
+
+.skewed{
+    clip-path: polygon(0% 0, 0% 100%, 100% calc(100% - 3rem), 100% 0%);
+      /* change the calc height to a percentage height to get alternate responsive behavior*/
 }
+
+
 
 @media only screen and (max-width: 441px){
     header{ 
@@ -72,9 +81,15 @@ nav, hr, .hero_logo, .card-media{
 
 section{
     box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    position:relative;
+    padding: 3rem 0;
 }
 
 body{
-    color: white;
-    background-color: var(--bg-color_dark)
+    color: var(--text-color_light);
+    background-color: var(--bg-color_medium);
+}
+
+footer{
+    background-color: var(--bg-color_dark);
 }

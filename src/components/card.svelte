@@ -6,7 +6,7 @@ let cards = [
     {title: 'card 3', text: 'lorem ispum lorem blablablablablabla', img: '../favicon-alt.svg'}
 ];
 </script>
-
+<div>
 <div class="flex-grid-wrap">
 {#each cards as card}
 <div class="flex-grid third">
@@ -27,7 +27,7 @@ let cards = [
 </div>
 {/each}
 </div>
-
+</div>
 <style>
 
 @media only screen and (max-width: 441px){

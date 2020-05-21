@@ -4,7 +4,6 @@ let src = '../images/chatterbots-automation.svg';
 </script>
 
 <div class="flex-grid-wrap">
-
 <div class="flex-grid">
 <img src={src} alt="automate all the things!">
 </div>
