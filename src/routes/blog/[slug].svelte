@@ -43,6 +43,7 @@
 	export let post;
 </script>
 
+
 <style>
 	/*
 		By default, CSS is locally scoped to the component,
@@ -137,8 +138,12 @@ img {
 <svelte:head>
 	<title>{post.title}</title>
 </svelte:head>
-<div class="container">
 
+<button class="backbtn" onclick="goBack()">
+Back
+</button>
+
+<div class="container">
 <h1 class="post-title">{post.title}</h1>
 <div class='content'>
   <img src={post.blogImg.url} alt="something" align="left"/>

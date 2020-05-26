@@ -1,8 +1,11 @@
 <script>
+
 let TwitterIcon = '../images/twitter-icon.svg';
 let LinkedinIcon = '../images/linkedin-icon.svg';
 
 export let segment;
+
+import {goto} from '@sapper/app';
 </script>
 
 <footer>
@@ -24,11 +27,11 @@ export let segment;
 <h4>Follow-us on social media</h4>
 
 <div class="social-icons">
-<a href="www.twitter.com">
+<a href="https://twitter.com/cassia_chtrbots">
 <img src={TwitterIcon} alt="twitter icon" class="social_icons">
 
 </a>
-<a href="www.linked.com">
+<a href="https://www.linkedin.com/company/chatterbots-agency">
 <img src={LinkedinIcon} alt="linkedin icon" class="social_icons">
 </a>
 </div>
