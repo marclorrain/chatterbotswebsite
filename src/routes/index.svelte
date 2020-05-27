@@ -10,7 +10,7 @@ import Card from '../components/card.svelte'
 
 <section class="skewed" style="background-color: var(--bg-color_dark);">
   <div class="section-heading_container">
-    <h2 class="section_title">Tag Line goes here</h2>
+    <h2 class="section_title"> It's a new teammate, not just a bot</h2>
   </div>
   <HeroBanner />
 </section>
@@ -18,7 +18,7 @@ import Card from '../components/card.svelte'
 <div style="background-color: var(--bg-color_dark)">
 <section style="background-color: var(--bg-color_medium)" class="skewed">
   <div class="section-heading_container">
-    <h2 class="section_title">Something Something yee-haw</h2>
+    <h2 class="section_title"> Bot's efficiency + Human's wit.</h2>
   </div>
     <Card/>
 </section>

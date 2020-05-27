@@ -1,9 +1,9 @@
 <script>
 
 let cards = [
-    {title: 'card 1', text: 'lorem ispum lorem blablablablablabla', img: '../favicon-alt.svg'},
-    {title: 'card 2', text: 'lorem ispum lorem blablablablablabla', img: '../favicon-alt.svg'},
-    {title: 'card 3', text: 'lorem ispum lorem blablablablablabla', img: '../favicon-alt.svg'}
+    {title: 'Meet your latest sales superstar.', text: 'Chatterbots identify, qualify, and direct potential leads, putting new customers in touch with exactly the right representative.', img: '../favicon-alt.svg'},
+    {title: '24/7/365', text: 'Chatterbots are always on hand to answer questions, take orders, handle returns, and more. Show your customers you care with 24/7 service.', img: '../favicon-alt.svg'},
+    {title: 'Speed up productivity', text: 'Chatterbots can take orders, log requests, book appointments, and more - freeing up your valuable time to focus on long term strategic goals.', img: '../favicon-alt.svg'}
 ];
 </script>
 <div>
@@ -35,7 +35,7 @@ let cards = [
         position: relative;
         top: 0;
         left: 0;
-        max-width: 100%;
+        width: 100%;
     }
     .third{
     min-width: 100%;
@@ -47,6 +47,7 @@ h2{
     font-size: 2em;
     text-decoration: underline var(--main-color_medium);
     text-transform: capitalize;
+    text-align: center;
 }
 
 .card{
@@ -54,9 +55,14 @@ h2{
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
-    width: 100%;
+    width: 70%;
     height: 50vh;
     text-align: left;
+}
+
+.card p{
+    font-size: 1.25em;
+    font-weight: 400;
 }
 
 .card-media{
