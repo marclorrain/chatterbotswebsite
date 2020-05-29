@@ -6,6 +6,7 @@ let LinkedinIcon = '../images/linkedin-icon.svg';
 export let segment;
 
 import {goto} from '@sapper/app';
+import NavList from '../components/navlist.svelte'
 </script>
 
 <footer>
@@ -13,12 +14,7 @@ import {goto} from '@sapper/app';
 <h4>Website</h4>
 <nav>
 	<ul>
-		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-		<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
+		<NavList/>
 	</ul>
 </nav>
 </div>
@@ -86,6 +82,7 @@ footer a{
 a:hover{
     filter: opacity(0.6);
 }
+
 
 @media only screen and (max-width: 441px){
     footer{

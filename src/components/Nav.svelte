@@ -4,7 +4,9 @@ export let segment;
 
 <nav class="desk-nav">
 		<a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a>
-		<a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a>
+		<a aria-current='{segment === "about" ? "page" : undefined}' href='about'>the team</a>
+        <a aria-current='{segment === "pricing" ? "page" : undefined}' href='pricing'>pricing</a>
+        <a aria-current='{segment === "contact" ? "page" : undefined}' href='contact'>contact</a>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->

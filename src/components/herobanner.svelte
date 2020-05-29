@@ -9,7 +9,11 @@ let src = '../images/chatterbots-automation.svg';
 </div>
 
   <div class="flex-grid">
-      <p> 
+      <p>
+      Our experts will design, set up, and maintain your chatbot, ensuring peak productivity and performance. We’ll integrate conversational marketing into your workflow, allowing your team to focus on what they do best. <br> <br>
+
+But don’t take our word for it. Stay and chat a while with Cassia, the spiciest chatterbot of them all.
+
      </p>
   <Btn CTAText={'Chat with Cassia'} Link={'#hello'}/>
   </div>
@@ -31,7 +35,7 @@ let src = '../images/chatterbots-automation.svg';
 }
 
 p{
-  font-size: 1.25em;
+  font-size: 1.75em;
   max-width: 60%;
   height: auto;
 }
