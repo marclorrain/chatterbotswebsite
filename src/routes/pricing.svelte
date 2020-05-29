@@ -18,7 +18,11 @@
 
 .container{
 	padding: 5% 30% 10% 30%;
-    line-height: 1.5em;
+	line-height: 1.5em;
+}
+
+.container p{
+	font-size: 1.25em;
 }
 
 .page-title{
